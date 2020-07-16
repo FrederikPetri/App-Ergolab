@@ -45,11 +45,6 @@ class ErgolabApp(MDApp):
         btn_icon_float = MDFloatingActionButton(icon='chess-knight',
                                                 pos_hint={'center_x': 0.3, 'center_y': 0.3})
 
-        # Create textfield
-        self.username = Builder.load_string(username_helper)
-        btn_forgot_username = MDRectangleFlatButton(text='vis', pos_hint={'center_x': 0.2, 'center_y': 0.2},
-                                                    on_release=self.show_data)
-
         # Create list
         scroll = ScrollView()
         list_view = MDList()
@@ -88,8 +83,7 @@ class ErgolabApp(MDApp):
         screen.add_widget(btn_flat)
         screen.add_widget(btn_icon)
         screen.add_widget(btn_icon_float)
-        screen.add_widget(self.username)
-        screen.add_widget(btn_forgot_username)
+
         #screen.add_widget(scroll)
         #screen.add_widget(table)
 
